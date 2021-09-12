@@ -48,7 +48,8 @@ app.get('/getRoute', function (request, response) {
 app.post('/postRoute', postData);
 
 function postData (req, res) {
-    projectData.push(newEntry)
+    projectData=req.body;
     console.log('Post request successful');
     return res.send(projectData);
+    
 }
